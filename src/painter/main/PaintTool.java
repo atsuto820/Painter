@@ -405,12 +405,9 @@ public class PaintTool {
 		UpdateRecent();
 
 		operations[0] = operation;
+		clearImage(recents[0], false);										// 最後の操作履歴を破棄
+		recents[0].getGraphics().drawImage(Main.pm.getImage(), 0, 0, null);	// 操作履歴画像を記録
 		switch (operation) {
-		case DRAW:
-			// 描画
-			clearImage(recents[0], false);										// 最後の操作履歴を破棄
-			recents[0].getGraphics().drawImage(Main.pm.getImage(), 0, 0, null);	// 操作履歴画像を記録
-			break;
 		case LAYER_SELECT:
 			// レイヤー選択
 			exInt1[0] = num;

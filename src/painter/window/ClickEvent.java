@@ -101,6 +101,10 @@ public class ClickEvent implements MouseListener, MouseMotionListener {
 		click[0] = e.getX();
 		click[1] = e.getY();
 		state = 1;
+		
+		// マウス位置を更新
+		x = e.getX();
+		y = e.getY();
 	}
 	
 	public void clear() {
@@ -110,6 +114,7 @@ public class ClickEvent implements MouseListener, MouseMotionListener {
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
+		// マウス位置を更新
 		x = e.getX();
 		y = e.getY();
 	}
