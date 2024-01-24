@@ -356,11 +356,6 @@ public class SelectPanel extends JPanel {
 			xSpinner.setPreferredSize(new Dimension(80, 40));
 			ySpinner.setPreferredSize(new Dimension(80, 40));
 			fontSizeSpinner.setPreferredSize(new Dimension(80, 40));
-			// 各種設定パネルに追加
-			etc.add(xLabel);
-			etc.add(yLabel);
-			etc.add(sizeLabel);
-			etc.add(fontLabel);
 
 			// 使用可能なフォント名の配列
 			String[] comboData = new String[fonts.length];
@@ -375,10 +370,15 @@ public class SelectPanel extends JPanel {
 			fontCombo.setPreferredSize(new Dimension(240, 40));
 			// デフォルト選択
 			fontCombo.setSelectedIndex(font);
+			
 			// 各種設定パネルに追加
+			etc.add(xLabel);
 			etc.add(xSpinner);
+			etc.add(yLabel);
 			etc.add(ySpinner);
+			etc.add(sizeLabel);
 			etc.add(fontSizeSpinner);
+			etc.add(fontLabel);
 			etc.add(fontCombo);
 
 			// テキスト決定ボタン
